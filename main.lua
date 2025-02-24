@@ -1,6 +1,23 @@
 local gui          = require "gui"
 
 local local_player
+local dungeon_maps = {
+    ["EGD_MSWK_World_01"] = true,
+    ["EGD_MSWK_World_02"] = true,
+    ["S05_BSK_Prototype02"] = true,
+    ["X1_Undercity_SnakeTemple"] = true,
+    ["X1_Undercity_SnakeTemple_01"] = true,
+    ["X1_Undercity_SnakeTemple_02"] = true,
+    ["X1_Undercity_SnakeTemple_03"] = true,
+    ["X1_Undercity_BugCave"] = true,
+    ["X1_Undercity_BugCave_01"] = true,
+    ["X1_Undercity_BugCave_02"] = true,
+    ["X1_Undercity_BugCave_03"] = true,
+    ["X1_Undercity_Ziggurat"] = true,
+    ["X1_Undercity_Ziggurat_01"] = true,
+    ["X1_Undercity_Ziggurat_02"] = true,
+    ["X1_Undercity_Ziggurat_03"] = true,
+}
 
 local function update_locals()
     local_player = get_local_player()
@@ -8,9 +25,7 @@ end
 local function player_in_dungeon()
     local current_zone = get_current_world():get_current_zone_name()
     -- if player in pit or horde, can add nmd next time
-    return current_zone == "EGD_MSWK_World_02" or
-        current_zone == "EGD_MSWK_World_01" or
-        current_zone == "S05_BSK_Prototype02"
+    return dungeon_maps[current_zone] ~= nil
 end
 
 local function main_pulse()
