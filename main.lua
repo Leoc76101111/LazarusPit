@@ -35,6 +35,10 @@ local function main_pulse()
                     return
                 end
             end
+            -- out of scroll
+            if player_in_dungeon() then
+                reset_all_dungeons()
+            end
         end
     end
 end
