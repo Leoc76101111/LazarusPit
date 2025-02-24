@@ -1,5 +1,5 @@
 local plugin_label = 'lazarus_pit'
-local plugin_version = 'v0.0.2'
+local plugin_version = 'v1.0.0'
 
 local gui = {}
 
