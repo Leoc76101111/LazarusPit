@@ -19,7 +19,7 @@ function gui.render()
     gui.elements.main_toggle:render("Enable", "Enable the bot")
     if gui.elements.main_toggle:get() then
         gui.elements.escape_percentage:render("Health %%", "%% health to immediately use scroll or dungeon reset")
-        gui.elements.dungeon_reset:render("Use Dungeon Reset for Pit/Horde", "Use Dungeon Reset for Pit/Horde to save scrolls")
+        gui.elements.dungeon_reset:render("Use Dungeon Reset for Pit/Horde/Undercity", "Use Dungeon Reset for Pit/Horde to save scrolls")
     end
     gui.elements.main_tree:pop()
 end
